@@ -34,7 +34,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "analyze": "ANALYZE_BUNDLE_SIZE=true gatsby build",
+    "deploy": "npm run build && aws s3 cp public/ s3://williamthor.net --recursive"
   },
   "repository": {
     "type": "git",
